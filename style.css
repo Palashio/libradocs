@@ -27,6 +27,11 @@
 .nav-tab:hover{
     background-color: rgb(229, 229, 229);
     cursor: pointer;
+    
+    border-right-style: solid;
+    border-right-color: rgb(0, 125, 217);
+    border-right-width: 3px;
+    border-radius: 3px;
 }
 
 .nav-tab.selected{

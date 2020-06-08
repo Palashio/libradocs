@@ -1,0 +1,59 @@
+:root{
+    --anim-del: 0s;
+    --screen-width: 1920;
+    --screen-height: 969;
+}
+
+#box{
+    height: calc(950px/969 * var(--screen-height));
+    width:  calc(3000px/1920 * var(--screen-width));
+    transform: skewX(-20deg);
+    position: fixed;
+    
+    background-color: rgb(89, 172, 255);
+    
+    animation-name: skewBox;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+    animation-delay: var(--anim-del);
+    z-index: 100;
+}
+
+#shadeBox{
+    height: calc(950px/969 * var(--screen-height));
+    width:  calc(3000px/1920 * var(--screen-width));
+    transform: skewX(-20deg);
+    position: fixed;
+    
+    background-color: rgb(255, 131, 131);
+    
+    animation-name: shadeBox;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+    animation-delay: var(--anim-del);
+    z-index: 99;
+}
+
+body{
+    height: calc(5000px/969 * var(--screen-height)); /*code was originally written on a 1920 by 969 monitor*/
+    max-width: var(--screen-width);
+}
+
+@keyframes skewBox {
+    0%   {left: calc(-1.1px * var(--screen-width)); top: 0%}
+    5%   {left: calc(-1.1px * var(--screen-width)); top: 0%}
+    25%  {left: calc(0.5px * var(--screen-width)); top: 0%}
+    75%  {left: calc(0.5px * var(--screen-width)); top: 0%}
+    100% {left: calc(0.5px * var(--screen-width)); top: -100%}
+}
+
+@keyframes shadeBox {
+    0%   {left: calc(-1.09px * var(--screen-width)); top: 0%}
+    30%  {left: calc(0.49px * var(--screen-width)); top: 0%}
+    75%  {left: calc(0.49px * var(--screen-width)); top: 0%}
+    100% {left: calc(0.49px * var(--screen-width)); top: -100%}
+}
