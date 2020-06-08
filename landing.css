@@ -18,7 +18,7 @@
     animation-play-state: paused;
     animation-fill-mode: forwards;
     animation-delay: var(--anim-del);
-    z-index: 100;
+    z-index: 10;
 }
 
 #shadeBox{
@@ -35,12 +35,103 @@
     animation-play-state: paused;
     animation-fill-mode: forwards;
     animation-delay: var(--anim-del);
-    z-index: 99;
+    z-index: 9;
 }
 
 body{
     height: calc(5000px/969 * var(--screen-height)); /*code was originally written on a 1920 by 969 monitor*/
     max-width: var(--screen-width);
+}
+
+#overview{
+    width: 750px;
+    left: 100px;
+    margin-top: 300px;
+    
+    color: white;
+    z-index: 11;
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    line-height: 130%;
+}
+
+.description{
+    color: white;
+    z-index: 11;
+    position: fixed;
+    left: 1100px;
+    width: 750px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 130%;
+    opacity: 0%;
+    
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+    animation-delay: var(--anim-del);
+}
+
+.descriptionImg{
+    max-width: 500px;
+    left: 100px;
+    position: fixed;
+    opacity: 0%;
+    
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+    animation-delay: var(--anim-del);
+}
+
+#logo{
+    left: 1100px;
+    margin-top: 250px;
+    position: absolute;
+}
+
+.button{
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.button:hover{
+    -webkit-transition : 0.2s;
+    transform: scale(1.1,1.1);
+    background-color: white;
+    color: rgb(89, 172, 255);
+}
+
+#olc{
+    animation-name: olc;
+}
+#nlp{
+    animation-name: nlp;
+}
+#cs{
+    animation-name: cs;
+}
+#eep{
+    animation-name: eep;
+}
+
+#olcImg{
+    animation-name: olcImg;
+}
+#nlpImg{
+    animation-name: nlpImg;
+}
+#csImg{
+    animation-name: csImg;
+}
+#eepImg{
+    animation-name: eepImg;
 }
 
 @keyframes skewBox {
@@ -56,4 +147,64 @@ body{
     30%  {left: calc(0.49px * var(--screen-width)); top: 0%}
     75%  {left: calc(0.49px * var(--screen-width)); top: 0%}
     100% {left: calc(0.49px * var(--screen-width)); top: -100%}
+}
+
+/*description keyframes take 10% per description, starting at 30%. 70px travel distance for fade*/
+
+@keyframes olc{
+    15%     {top : 60%; opacity: 0%}
+    30%     {top : 40%; opacity: 100%}
+    35%     {top : 40%; opacity: 100%}
+    40%     {top : 20%; opacity: 0%}
+}
+
+@keyframes nlp{
+    35%     {top : 60%; opacity: 0%}
+    40%     {top : 40%; opacity: 100%}
+    45%     {top : 40%; opacity: 100%}
+    50%     {top : 20%; opacity: 0%}
+}
+
+@keyframes cs{
+    45%     {top : 60%; opacity: 0%}
+    50%     {top : 40%; opacity: 100%}
+    55%     {top : 40%; opacity: 100%}
+    60%     {top : 20%; opacity: 0%}
+}
+
+@keyframes eep{
+    55%     {top : 60%; opacity: 0%}
+    60%     {top : 40%; opacity: 100%}
+    75%     {top : 40%; opacity: 100%}
+    100%    {top : -100%; opacity: 100%}
+}
+
+/*image keyframes, lines up with the descriptions*/
+
+@keyframes olcImg{
+    15%     {top : 15%; opacity: 0%}
+    30%     {top : 25%; opacity: 100%}
+    35%     {top : 25%; opacity: 100%}
+    40%     {top : 55%; opacity: 0%}
+}
+
+@keyframes nlpImg{
+    35%     {top : 20%; opacity: 0%}
+    40%     {top : 40%; opacity: 100%}
+    45%     {top : 40%; opacity: 100%}
+    50%     {top : 60%; opacity: 0%}
+}
+
+@keyframes csImg{
+    45%     {top : 20%; opacity: 0%}
+    50%     {top : 40%; opacity: 100%}
+    55%     {top : 40%; opacity: 100%}
+    60%     {top : 60%; opacity: 0%}
+}
+
+@keyframes eepImg{
+    55%     {top : 20%; opacity: 0%}
+    60%     {top : 40%; opacity: 100%}
+    75%     {top : 40%; opacity: 100%}
+    100%    {top : -100%; opacity: 100%}
 }
