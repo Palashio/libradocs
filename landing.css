@@ -41,6 +41,7 @@
 body{
     height: calc(5000px/969 * var(--screen-height)); /*code was originally written on a 1920 by 969 monitor*/
     max-width: var(--screen-width);
+    font-family: sans-serif;
 }
 
 #overview{
@@ -91,6 +92,14 @@ body{
     left: 1100px;
     margin-top: 250px;
     position: absolute;
+    height: 25%;
+    width: 40%;
+}
+
+.logo{
+    position: absolute;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 .button{
@@ -106,6 +115,40 @@ body{
     transform: scale(1.1,1.1);
     background-color: white;
     color: rgb(89, 172, 255);
+}
+
+#img1{
+    margin: 93px;
+    animation-duration: 5s;
+    animation-name: clockwise;
+}
+#img2{
+    margin: 70px;
+    animation-duration: 3s;
+    animation-name: counterClockwise;
+}
+
+#img3{
+    margin: 45px;
+    animation-duration: 5s;
+    animation-name: clockwise;
+}
+
+#img4{
+    margin: 20px;
+    animation-duration: 3s;
+    animation-name: counterClockwise;
+}
+
+#img5{
+    margin: 0px;
+    animation-duration: 5s;
+    animation-name: clockwise;
+}
+
+#libra{
+    padding-left: 40%;
+    padding-top: 9%;
 }
 
 #olc{
@@ -132,6 +175,16 @@ body{
 }
 #eepImg{
     animation-name: eepImg;
+}
+
+@keyframes clockwise{
+    from{ transform: rotate(0deg)}
+    to{transform: rotate(360deg)}
+}
+
+@keyframes counterClockwise{
+    from{ transform: rotate(360deg)}
+    to{transform: rotate(0deg)}
 }
 
 @keyframes skewBox {
