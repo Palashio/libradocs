@@ -7,6 +7,10 @@ function load(){
 var prevSlide=5;
 
 function slideshow(slide){
+    if(prevSlide == slide){ //don't reanimate if the same tab was clicked consecutively
+        return;
+    }
+    
 //    graphic
     document.getElementById("g" + prevSlide).classList.remove("float");
     document.getElementById("g" + prevSlide).classList.add("drop");
