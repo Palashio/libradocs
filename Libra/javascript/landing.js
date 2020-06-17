@@ -1,5 +1,9 @@
 function load(){
-    document.documentElement.style.setProperty("--screen-width",window.innerWidth); //code originally written on a 1920x969 monitor
+    var w = window.innerWidth; //window width includes area used for scroll bars so subtract some width later on
+    if(w < 1300){
+        w = 1300;
+    }
+    document.documentElement.style.setProperty("--screen-width", w); //code originally written on a 1920x969 monitor
     document.documentElement.style.setProperty("--screen-height", window.innerHeight);
     slideshow(0);
 }
