@@ -3,7 +3,7 @@ load = null;
 $(function(){
      function load_function(id){
          $("#content").empty();
-        $("#content").load(id + ".html"); 
+        $("#content").load("https://raw.githubusercontent.com/Palashio/libradocs/master/Libra/html/" + id + ".html"); 
      }
        
     load = load_function;
